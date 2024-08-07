@@ -19,7 +19,7 @@
             height: 100vh;
             background:
                 linear-gradient(to bottom, transparent 60%, rgb(215, 153, 215)60%),
-                url(./assets/images/background-pattern-desktop.svg) no-repeat center top;
+                url(background-pattern-desktop.svg) no-repeat center top;
             background-size: cover;
         }
 
@@ -92,7 +92,7 @@
                 height: 130vh;
                 background:
                     linear-gradient(to bottom, transparent 60%, rgb(215, 153, 215)60%),
-                    url(./assets/images/background-pattern-mobile.svg) no-repeat center top;
+                    url(background-pattern-mobile.svg) no-repeat center top;
                 background-size: cover;
             }
 
@@ -132,14 +132,14 @@
     <main id="main1">
         <div id="main2">
             <div id="main3">
-                <h1><img class="himg" src="./assets/images/icon-star.svg" alt="">FAQs</h1>
+                <h1><img class="himg" src="icon-star.svg" alt="">FAQs</h1>
                 <div class="containerli">
                     <ul>
                         <span>
                             <li class="toggle-tab active" data-target="one">What is Frontend Mentor, and how will it
                                 help me?
                             </li><img id="imgalign1" onclick="changeImage()" class="toggle-tab" data-target="one"
-                                src="./assets/images/icon-minus.svg" alt="">
+                                src="icon-minus.svg" alt="">
                         </span>
                         <div class="toggle-button active" onclick="changeImage()" data-target="one">Lorem1 ipsum dolor
                             sit
@@ -153,7 +153,7 @@
                         <span>
                             <li class="toggle-tab" data-target="two">Is Frontend Mentor free?</li><img
                                 onclick="changeImage2()" class="toggle-tab" data-target="two" id="imgalign2"
-                                src="./assets/images/icon-plus.svg" alt="">
+                                src="icon-plus.svg" alt="">
                         </span>
                         <div class="toggle-button" onclick="changeImage2()" data-target="two">Lorem2 ipsum dolor sit
                             amet
@@ -168,7 +168,7 @@
                                 portfolio?
                             </li>
                             <img class="toggle-tab" data-target="three" id="imgalign3"
-                                src="./assets/images/icon-plus.svg" alt="">
+                                src="icon-plus.svg" alt="">
                         </span>
                         <div class="toggle-button" data-target="three">Lorem3 ipsum dolor sit amet consectetur
                             adipisicing
@@ -182,7 +182,7 @@
                             <li class="toggle-tab" data-target="four">How can I get help if I'm stuck on a challenge?
                             </li>
                             <img class="toggle-tab" data-target="four" id="imgalign4"
-                                src="./assets/images/icon-plus.svg" alt="">
+                                src="icon-plus.svg" alt="">
                         </span>
                         <div class="toggle-button" data-target="four">Lorem4 ipsum dolor sit amet consectetur
                             adipisicing
@@ -215,7 +215,7 @@
                 });
 
                 images.forEach(img => {
-                    img.src = './assets/images/icon-plus.svg';
+                    img.src = 'icon-plus.svg';
                 });
 
                 tab.classList.add('active');
@@ -224,7 +224,7 @@
                     if (targetBtn === target) {
                         btn.classList.add('active');
                         const img = document.querySelector(`img[data-target='${target}']`);
-                        img.src = './assets/images/icon-minus.svg';
+                        img.src = 'icon-minus.svg';
                     }
                 });
             });
