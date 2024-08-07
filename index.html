@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sriracha&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            background:
+                linear-gradient(to bottom, transparent 60%, rgb(215, 153, 215)60%),
+                url(./assets/images/background-pattern-desktop.svg) no-repeat center top;
+            background-size: cover;
+        }
+
+        .toggle-button {
+            display: none;
+        }
+
+        div.containerli {
+            display: grid;
+            align-items: center;
+        }
+
+        #main2 {
+            display: grid;
+            margin-left: 25%;
+            width: 50%;
+            margin-top: 0;
+            box-shadow: 0px 0px 0px 0px #a2b3b900;
+            border-radius: 25px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 20px 0;
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .toggle-button.active {
+            display: flex;
+            padding: 0px 115px 0px 0px;
+            text-align: start;
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        h1 {
+            padding: 0 5px;
+            display: flex;
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            /* font-weight: weight; */
+            font-style: normal;
+        }
+
+        img.himg {
+            padding: 0 5px;
+        }
+
+        span {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #imgalign1,
+        #imgalign2,
+        #imgalign3,
+        #imgalign4 {
+            padding-right: 20px;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                height: 130vh;
+                background:
+                    linear-gradient(to bottom, transparent 60%, rgb(215, 153, 215)60%),
+                    url(./assets/images/background-pattern-mobile.svg) no-repeat center top;
+                background-size: cover;
+            }
+
+            #main2 {
+                margin-left: 10%;
+                width: 80%;
+            }
+
+            ul li {
+                list-style: none;
+                margin: 20px 50px 20px 0;
+            }
+
+            .toggle-button.active {
+                display: flex;
+                padding: 0px 70px 0px 0px;
+                text-align: start;
+            }
+        }
+
+        @media (max-width: 370px) {
+            ul li {
+                list-style: none;
+                margin: 20px 10px 20px 0;
+            }
+
+            .toggle-button.active {
+                display: flex;
+                padding: 0px 0px 0px 0px;
+                text-align: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main id="main1">
+        <div id="main2">
+            <div id="main3">
+                <h1><img class="himg" src="./assets/images/icon-star.svg" alt="">FAQs</h1>
+                <div class="containerli">
+                    <ul>
+                        <span>
+                            <li class="toggle-tab active" data-target="one">What is Frontend Mentor, and how will it
+                                help me?
+                            </li><img id="imgalign1" onclick="changeImage()" class="toggle-tab" data-target="one"
+                                src="./assets/images/icon-minus.svg" alt="">
+                        </span>
+                        <div class="toggle-button active" onclick="changeImage()" data-target="one">Lorem1 ipsum dolor
+                            sit
+                            amet consectetur adipisicing
+                            elit.
+                            Eveniet quidem aut tenetur explicabo dignissimos. Dolore laudantium pariatur minima sit
+                            nobis
+                            dicta
+                            illo,
+                            repellat illum ducimus reiciendis facere deleniti recusandae minus!</div>
+                        <span>
+                            <li class="toggle-tab" data-target="two">Is Frontend Mentor free?</li><img
+                                onclick="changeImage2()" class="toggle-tab" data-target="two" id="imgalign2"
+                                src="./assets/images/icon-plus.svg" alt="">
+                        </span>
+                        <div class="toggle-button" onclick="changeImage2()" data-target="two">Lorem2 ipsum dolor sit
+                            amet
+                            consectetur adipisicing elit.
+                            Eveniet quidem aut tenetur explicabo dignissimos. Dolore laudantium pariatur minima sit
+                            nobis
+                            dicta
+                            illo,
+                            repellat illum ducimus reiciendis facere deleniti recusandae minus!</div>
+                        <span>
+                            <li class="toggle-tab" data-target="three">Can I use Frontend Mentor projects in my
+                                portfolio?
+                            </li>
+                            <img class="toggle-tab" data-target="three" id="imgalign3"
+                                src="./assets/images/icon-plus.svg" alt="">
+                        </span>
+                        <div class="toggle-button" data-target="three">Lorem3 ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                            Eveniet
+                            quidem aut tenetur explicabo dignissimos. Dolore laudantium pariatur minima sit nobis dicta
+                            illo,
+                            repellat
+                            illum ducimus reiciendis facere deleniti recusandae minus!</div>
+                        <span>
+                            <li class="toggle-tab" data-target="four">How can I get help if I'm stuck on a challenge?
+                            </li>
+                            <img class="toggle-tab" data-target="four" id="imgalign4"
+                                src="./assets/images/icon-plus.svg" alt="">
+                        </span>
+                        <div class="toggle-button" data-target="four">Lorem4 ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit.
+                            Eveniet
+                            quidem aut tenetur explicabo dignissimos. Dolore laudantium pariatur minima sit nobis dicta
+                            illo,
+                            repellat
+                            illum ducimus reiciendis facere deleniti recusandae minus!</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const toggleTab = document.querySelectorAll('.toggle-tab');
+        const toggleButton = document.querySelectorAll('.toggle-button');
+        const images = document.querySelectorAll('img.toggle-tab');
+
+        toggleTab.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-target');
+
+                toggleTab.forEach(t => {
+                    t.classList.remove('active');
+                });
+
+                toggleButton.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                images.forEach(img => {
+                    img.src = './assets/images/icon-plus.svg';
+                });
+
+                tab.classList.add('active');
+                toggleButton.forEach(btn => {
+                    const targetBtn = btn.getAttribute('data-target');
+                    if (targetBtn === target) {
+                        btn.classList.add('active');
+                        const img = document.querySelector(`img[data-target='${target}']`);
+                        img.src = './assets/images/icon-minus.svg';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
